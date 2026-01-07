@@ -1,55 +1,47 @@
-# cybersecurity-portofolio
-# Cyber Security Portfolio: Vulnerability Assessment & Penetration Testing
-### 🛡️ Unauthorized Access & System Hardening Simulation
-
-![Build Status](https://img.shields.io/badge/Status-Completed-success)
-![Platform](https://img.shields.io/badge/Platform-Linux%20%2F%20Metasploitable-blue)
-![Tools](https://img.shields.io/badge/Tools-Nmap%20%7C%20Metasploit%20%7C%20BurpSuite-red)
-
----
-
 ## 👨‍💻 About Me
-* **Name:** [Nama Kamu]
-* **Role:** Cyber Security Student / Aspiring Penetration Tester
-* **Focus:** Network Security, Ethical Hacking, System Hardening.
-* **Contact:** [Link LinkedIn Kamu] | [Email Kamu]
+* **Name:** Ezar Dega Auffa
+* **Role:** Aspiring Red Teamer | Offensive Security Practitioner
+* **Focus:** Adversary Simulation, Exploit Development, Malware Analysis.
+
+* **Bio:**
+  I am a Cyber Security enthusiast transitioning into **Red Teaming** and **Adversary Simulation**. Currently sharpening my offensive capabilities through the *Dibimbing.id* intensive bootcamp, with a specific interest in understanding how advanced persistent threats (APTs) operate to better defend critical infrastructures.
+
+ My engineering mindset was proven by achieving a **Silver Medal in GYIIF** for conceptualizing a laser-based data transfer system. This experience honed my ability to design complex logical flows, which I now apply in understanding system vulnerabilities. Whith that as my basic currently i transalting my logical skills into code, actively mastering **C++** (for malware development concepts) and **Python** (for automation) to build my own offensive tools.
+
+ my role as **Head of Language Division (Thursina Student Aassotiation)** and **INTERPOL Delegate at AYIMUN** trained me in strategic communication and psychology—key assets I leverage for **Social Engineering** scenarios and professional executive reporting.
+
+ ## **Projects**
+ * ## 🏢 Project 1: Legacy System Vulnerability Assessment & Hardening
+
+* **Objective:** Conducted a grey-box penetration test on a corporate server environment to identify critical vulnerabilities in legacy infrastructure (Windows 7) and develop a comprehensive mitigation strategy.
+* **Target Environment:** Windows 7 (Legacy), SMB Services.
+* **Tools Used:** Nmap v7.95, Metasploit Framework, CVSS Scoring.
+
+### **Methodology & Execution**
+
+1.  **Reconnaissance (Mapping the Attack Surface)**
+    * Utilized `nmap -sS -sC` to identify open ports.
+    * **Findings:** Detected open ports **139 & 445 (SMB/NetBIOS)** and **3389 (RDP)**.
+    * **Vulnerability:** Service version enumeration revealed the OS was unpatched against **MS17-010 (EternalBlue)**.
+
+2.  **Exploitation (Proof of Concept)**
+    * Leveraged the **EternalBlue** exploit to demonstrate how an attacker could execute remote code via specially crafted packets.
+    * **Impact:** Gained `SYSTEM` level access without authentication.
+
+    > *[Insert Screenshot of Metasploit success here if available]*
+
+3.  **Mitigation & Recovery Strategy**
+    * **Immediate Action:** Patch the OS with Microsoft Security Bulletin MS17-010.
+    * **Long-term:** Migrate legacy Windows 7 systems to supported OS (Windows 10/11 or Linux).
+    * **Compliance:** Prepare the infrastructure for **ISO27001** certification to ensure standard security controls are in place.
 
 ---
 
-## ⚠️ Disclaimer & Ethics Statement
-> **IMPORTANT:**
-> All activities documented in this portfolio were conducted in a **strictly controlled and authorized laboratory environment** (Virtual Machine).
->
-> No live targets, public networks, or unauthorized systems were interacted with during this assessment. All sensitive data (IP addresses, user paths) in the documentation has been **sanitized** for privacy and security standards.
+* **Technical Arsenal:**
+  * **Offensive:** Metasploit, Cobalt Strike (Study), Burp Suite.
+  * **Development:** C++ , Python , Bash.
+  * **Soft Skills:** Strategic Planning (TSA Language Div. Head), Negotiation & Public Speaking.
+
+* **Contact:** [ezar.dega17@gmail.com](mailto:ezar.dega17@gmail.com) | [https://www.linkedin.com/in/ezar-dega-auffa-36582a328/]
 
 ---
-
-## 📑 Table of Contents
-1. [Project Overview](#-project-overview)
-2. [Phase 1: Reconnaissance & Scanning](#-phase-1-reconnaissance--scanning)
-3. [Phase 2: Exploitation (Sanitized)](#-phase-2-exploitation-sanitized)
-4. [Phase 3: Post-Exploitation Strategy](#-phase-3-post-exploitation-strategy-conceptual)
-5. [Final Report & Mitigation](#-final-report--mitigation)
-
----
-
-## 🎯 Project Overview
-This portfolio documents a complete **Cyber Kill Chain** simulation targeting a vulnerable Linux machine (**Metasploitable 2**). The objective was to identify critical vulnerabilities, demonstrate proof-of-concept exploitation, and provide actionable mitigation strategies to secure the system.
-
-**Key Objectives:**
-* Identify open ports and vulnerable services.
-* Gain initial access via known exploits.
-* Demonstrate ethical reporting and remediation.
-
----
-
-## 🔍 Phase 1: Reconnaissance & Scanning
-
-**Objective:** Map the attack surface and identify potential entry points.
-
-### 1.1. Network Scanning (Nmap)
-Used `nmap` to scan for open ports and service versions.
-
-```bash
-# Command used:
-nmap -sV -sC -O -oN initial_scan.txt [TARGET_IP]
