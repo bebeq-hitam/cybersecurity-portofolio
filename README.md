@@ -75,11 +75,11 @@ Audited database schemas to compare Plaintext password storage vs. Hashed storag
 
 * **Network Traffic Forensics** (HTTP vs HTTPS):
 
-*Conducted a packet sniffing simulation on two live targets (Academic Portal vs Legal Entity Portal).
+* Conducted a packet sniffing simulation on two live targets (Academic Portal vs Legal Entity Portal).
 
-*Outcome: Captured cleartext credentials on the HTTP target, proving susceptibility to Man-in-the-Middle (MitM) attacks, while validating TLS encryption effectiveness on the HTTPS target.
+* Outcome: Captured cleartext credentials on the HTTP target, proving susceptibility to Man-in-the-Middle (MitM) attacks, while validating TLS encryption effectiveness on the HTTPS target.
 
-*Outcome: Formulated a remediation guideline mandating the use of Argon2/bcrypt for data at rest and enforcing SSL/TLS for all data in transit.
+* Outcome: Formulated a remediation guideline mandating the use of Argon2/bcrypt for data at rest and enforcing SSL/TLS for all data in transit.
 
 * **Technical Arsenal:**
   * **Offensive:** Metasploit, Cobalt Strike (Study), Burp Suite.
