@@ -82,7 +82,7 @@ Audited database schemas to compare Plaintext password storage vs. Hashed storag
 * Outcome: Formulated a remediation guideline mandating the use of Argon2/bcrypt for data at rest and enforcing SSL/TLS for all data in transit.
 
 * **Technical Arsenal:**
-  * **Offensive:** Metasploit, Cobalt Strike (Study), Burp Suite.
+  * **Offensive:** Metasploit, SQLMap, NMAP, Wiresahark, Burp Suite.
   * **Development:** C++ , Python , Bash.
   * **Soft Skills:** Strategic Planning (TSA Language Div. Head), Negotiation & Public Speaking.
 
