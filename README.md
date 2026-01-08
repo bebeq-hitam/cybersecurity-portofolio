@@ -61,7 +61,7 @@
 
 **Methodology:**
 
-*Hashing Algorithm Stress Test:
+* Hashing Algorithm Stress Test:
 
 Developed a Python script to compare MD5 vs bcrypt hashing integrity.
 
